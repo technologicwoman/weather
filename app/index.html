@@ -31,15 +31,15 @@
     <![endif]-->
     <section class="weather">
       <div class="col s12 m7 panel">
-        <div id="cssSelector" class=" main-panel">
-          <div class="main-panel__title">Monday</div>
-          <div class="main-panel__container-info el">
-            <div class="main-panel__weather-img" style="background-image: url('./img/icons/mostly-cloudy.png')"></div>
-            <div class="main-panel__temperature">24<sup>°c</sup></div>
+        <div class="js-main-panel main-panel">
+          <div class="js-main-panel-title main-panel__title no-visible">Monday</div>
+          <div class="main-panel__container-info">
+            <div class="js-main-panel-image main-panel__weather-img" style="background-image: url('./img/icons/mostly-cloudy.png')"></div>
+            <div class="js-main-panel-tmp main-panel__temperature">24<sup>°c</sup></div>
           </div>
-          <div class="main-panel__subtitle">City</div>
+          <div class="js-main-panel-subtitle main-panel__subtitle">City</div>
         </div>
-        <div class="info-panel">
+        <div class="info-panel js-info-panel no-visible">
           <div class="info-panel__container">
             <i class="fas fa-cloud info-panel__icon"></i>
             <div class="info-panel__number">0%</div>
@@ -74,6 +74,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/plugins.js -->
+
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>

@@ -27,6 +27,8 @@ $icon-font-path: '../fonts/'
     font-weight: 800
     letter-spacing: 0.2rem
     margin-left: 1rem
+    position: relative
+    top: -75px
 
     &_blue
       color: blue
@@ -67,6 +69,8 @@ $icon-font-path: '../fonts/'
   color: #f3f3f3
   width: 30%
   background-color: blue
+  position: relative
+  right: -30%
   @include border-right-radius(10px)
 
   &__container
@@ -83,3 +87,7 @@ $icon-font-path: '../fonts/'
     color: #f3f3f3
     font-size: 4rem
     font-weight: 800
+
+/* HELPERS */
+.no-visible
+  opacity: 0
