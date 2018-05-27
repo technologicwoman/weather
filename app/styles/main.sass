@@ -12,7 +12,74 @@ $icon-font-path: '../fonts/'
 .panel
   margin: auto
   max-width: 1200px
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.19)
-  @include border-top-radius(5px)
-  @include border-bottom-radius(5px)
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19)
+  display: flex
+  border: none
+  @include border-top-radius(10px)
+  @include border-bottom-radius(10px)
 
+.main-panel
+  padding: 2rem 4rem
+  width: 70%
+
+  &__title
+    font-size: 4rem
+    font-weight: 800
+    letter-spacing: 0.2rem
+    margin-left: 1rem
+
+    &_blue
+      color: blue
+
+    &_red
+      color: red
+  
+  &__container-info
+    display: flex
+    flex-flow: row nowrap
+    margin-top: 2rem
+
+  &__weather-img
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 175px
+    width: 175px
+    margin-right: 2rem
+
+  &__temperature
+    font-size: 12rem
+    font-weight: 500
+
+    sup
+      font-size: 60%
+      
+
+  &__subtitle
+    font-weight: 800
+    font-size: 2rem
+    color: #cccccc
+    margin-top: 2rem
+    margin-left: 1rem
+
+.info-panel
+  padding: 2rem 3rem
+  color: #f3f3f3
+  width: 30%
+  background-color: blue
+  @include border-right-radius(10px)
+
+  &__container
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 2rem
+
+  &__icon
+    font-size: 5rem
+
+  &__number
+    color: #f3f3f3
+    font-size: 4rem
+    font-weight: 800

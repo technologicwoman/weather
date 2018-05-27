@@ -17,10 +17,13 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+    <!-- build:css styles/weather-icons.min.css -->
+    <link rel="stylesheet" href="styles/weather-icons.min.css">
+    <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <body>
     <!--[if IE]>
@@ -28,8 +31,28 @@
     <![endif]-->
     <section class="weather">
       <div class="col s12 m7 panel">
-        <div class="main-panel">heyy</div>
-        <div class="info-panel"> jojojo</div>
+        <div id="cssSelector" class=" main-panel">
+          <div class="main-panel__title">Monday</div>
+          <div class="main-panel__container-info el">
+            <div class="main-panel__weather-img" style="background-image: url('./img/icons/mostly-cloudy.png')"></div>
+            <div class="main-panel__temperature">24<sup>°c</sup></div>
+          </div>
+          <div class="main-panel__subtitle">City</div>
+        </div>
+        <div class="info-panel">
+          <div class="info-panel__container">
+            <i class="fas fa-cloud info-panel__icon"></i>
+            <div class="info-panel__number">0%</div>
+          </div>
+          <div class="info-panel__container">
+            <i class="fas fa-tint info-panel__icon"></i>
+            <div class="info-panel__number">0%</div>
+          </div>
+          <div class="info-panel__container">
+            <i class="fas fa-feather info-panel__icon"></i>
+            <div class="info-panel__number">0%</div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -46,6 +69,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/animejs/anime.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
