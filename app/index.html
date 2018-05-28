@@ -11,7 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bulma/css/bulma.min.css"></link>
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.min.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -35,59 +35,77 @@
     <section class="weather">
       <div class="col s12 m7 panel">
         <div class="js-main-panel main-panel">
-          <div class="js-main-panel-title main-panel__title no-visible">Monday</div>
-          <div class="main-panel__container-info">
-            <div class="js-main-panel-image main-panel__weather-img"></div>
-            <div class="js-main-panel-tmp main-panel__temperature no-visible"><span class="js-number"></span><sup>°c</sup></div>
+          <div class="main-panel__present">
+            <div class="js-main-panel-title main-panel__title no-visible">Monday</div>
+              <div class="main-panel__container-info">
+                <div class="js-main-panel-image main-panel__weather-img"></div>
+                <div class="js-main-panel-tmp main-panel__temperature no-visible"><span class="js-number"></span><sup>°c</sup></div>
+              </div>
+            <div class="js-main-panel-subtitle main-panel__subtitle no-visible">Bogotá</div>
           </div>
-          <div class="js-main-panel-subtitle main-panel__subtitle no-visible">Bogotá</div>
         </div>
         <div class="info-panel js-info-panel no-visible">
           <div class="info-panel__header">
-            <p class="info-panel__h-text">¡don't let weather ruin your plans, predícelo!</p>
+            <p class="info-panel__h-text">¡Don't let weather ruin your plans, you might predict it!</p>
             <i class="far fa-smile"></i>
           </div>
           <div class="info-panel__container">
             <div class="field is-horizontal">
                 <div class="field-label is-medium">
-                  <label class="label is-medium">Nombre</label>
+                  <label class="label is-medium">Name</label>
                 </div>
                 <div class="field-body">
                   <div class="field is-narrow">
                     <div class="control">
-                        <input class="input is-medium" type="email" placeholder="">
+                        <input class="js-name input is-medium" placeholder="">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="field is-horizontal">
                 <div class="field-label is-medium">
-                  <label class="label is-medium">Horas para la predicción</label>
+                  <label class="label is-medium">Hours to prediction</label>
                 </div>
                 <div class="control">
                   <div class="select is-medium">
-                    <select>
-                      <option>3 horas</option>
-                      <option>6 horas</option>
-                      <option>9 horas</option>
+                    <select class="js-step-select">
+                      <option value="3">3 hours</option>
+                      <option value="6">6 hours</option>
+                      <option value="9">9 hours</option>
                     </select>
                   </div>
                 </div>
               </div>
               <div class="control margin-top">
-                <button class="button is-medium btn-purple">Predecir</button>
+                <button class="js-submit button is-medium btn-purple">Predict</button>
               </div>
           </div>
         </div>
+      </div>  
+      <div class="js-prediction-modal modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="js-main-panel main-panel prediction-panel">
+            <div class="main-panel__present">
+              <div class="js-prediction-title main-panel__title no-visible"></div>
+                <div class="main-panel__container-info">
+                  <div class="js-prediction-image main-panel__weather-img"></div>
+                  <div class="js-prediction-description prediction-panel__description no-visible"></div>
+                </div>
+              <div class="js-prediction-subtitle main-panel__subtitle no-visible">Bogotá</div>
+            </div>
+          </div>
+        </div>
+        <button class="js-close-modal modal-close is-large" aria-label="close"></button>
       </div>
     </section>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="/bower_components/animejs/anime.min.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/animejs/anime.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

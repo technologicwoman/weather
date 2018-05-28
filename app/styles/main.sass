@@ -23,6 +23,7 @@ $icon-font-path: '../fonts/'
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19)
   display: flex
   border: none
+  flex-flow: row wrap
   @include border-top-radius(10px)
   @include border-bottom-radius(10px)
 
@@ -105,7 +106,6 @@ $icon-font-path: '../fonts/'
     text-align: center
     font-size: 2rem
     font-weight: 800
-    text-transform: uppercase
     letter-spacing: .2rem
 
   &__icon
@@ -133,3 +133,13 @@ $icon-font-path: '../fonts/'
   &:hover
     color: #03A9F4
     background-color: #ffffff
+
+.prediction-panel
+  width: 100%
+
+  &__description
+    font-size: 2rem
+    letter-spacing: .1rem
+    width: calc(100% - 175px)
+    position: relative
+    left: -100px
