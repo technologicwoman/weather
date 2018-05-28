@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bulma/css/bulma.min.css"></link>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -36,36 +37,51 @@
         <div class="js-main-panel main-panel">
           <div class="js-main-panel-title main-panel__title no-visible">Monday</div>
           <div class="main-panel__container-info">
-            <div class="js-main-panel-image main-panel__weather-img" style="background-image: url('./img/icons/mostly-cloudy.png')"></div>
-            <div class="js-main-panel-tmp main-panel__temperature no-visible">24<sup>°c</sup></div>
+            <div class="js-main-panel-image main-panel__weather-img"></div>
+            <div class="js-main-panel-tmp main-panel__temperature no-visible"><span class="js-number"></span><sup>°c</sup></div>
           </div>
           <div class="js-main-panel-subtitle main-panel__subtitle no-visible">Bogotá</div>
         </div>
         <div class="info-panel js-info-panel no-visible">
-          <div class="info-panel__container">
-            <i class="fas fa-cloud info-panel__icon"></i>
-            <div class="info-panel__number">0%</div>
+          <div class="info-panel__header">
+            <p class="info-panel__h-text">¡don't let weather ruin your plans, predícelo!</p>
+            <i class="far fa-smile"></i>
           </div>
           <div class="info-panel__container">
-            <i class="fas fa-tint info-panel__icon"></i>
-            <div class="info-panel__number">0%</div>
-          </div>
-          <div class="info-panel__container">
-            <i class="fas fa-feather info-panel__icon"></i>
-            <div class="info-panel__number">0%</div>
+            <div class="field is-horizontal">
+                <div class="field-label is-medium">
+                  <label class="label is-medium">Nombre</label>
+                </div>
+                <div class="field-body">
+                  <div class="field is-narrow">
+                    <div class="control">
+                        <input class="input is-medium" type="email" placeholder="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field is-horizontal">
+                <div class="field-label is-medium">
+                  <label class="label is-medium">Horas para la predicción</label>
+                </div>
+                <div class="control">
+                  <div class="select is-medium">
+                    <select>
+                      <option>3 horas</option>
+                      <option>6 horas</option>
+                      <option>9 horas</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="control margin-top">
+                <button class="button is-medium btn-purple">Predecir</button>
+              </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

@@ -1,7 +1,62 @@
 console.log('\'Allo \'Allo!');
 
-$(function() {
+const weathers = {
+  'CLEAR': 'Clear',
+  'RAIN': 'Rain',
+  'CLOUDS': 'Clouds',
+}
 
+const weatherImg = {
+  'CLEAR': './img/icons/clear-day.png',
+  'RAIN': './img/icons/rainy-day.png',
+  'CLOUDS': './img/icons/mostly-cloudy.png',
+}
+
+const weekDays = {
+  0: 'Sunday',
+  1: 'Monday',
+  2: 'Tuesday',
+  3: 'Wednesday',
+  4: 'Thursday',
+  5: 'Friday',
+  6: 'Saturday',
+}
+
+
+$(function() {
+  let today = new Date();
+  let currentDay = weekDays[today.getDay()];
+  
+  $.get( "http://35.190.138.158:5002/predictions?city=asd&steps=2", function( data ) {
+    console.log(data);
+    putCurrentData(data.current, data.temp, currentDay);
+    initAnimation();
+  });
+  
+
+})
+
+const putCurrentData = (currentWeather, currentTemp, currentDay) => {
+  let wtherImg;
+  let weather = currentWeather.toString();
+
+  switch (weather) {
+    case weathers.CLEAR:
+      wtherImg = weatherImg.CLEAR
+      break;
+    case weathers.RAIN:
+      wtherImg = weatherImg.RAIN
+      break;
+    case weathers.CLOUDS:
+      wtherImg = weatherImg.CLOUDS
+      break;
+  }
+  $('.js-main-panel-title').text(currentDay);
+  $('.js-number').text(currentTemp);
+  $('.js-main-panel-image').css("background-image" , `url(${wtherImg})`);
+}
+
+const initAnimation = () => {
   var baseTimeLine = anime.timeline();
 
   baseTimeLine
@@ -18,7 +73,7 @@ $(function() {
     .add({
       targets: '.js-info-panel',
       translateX: {
-        value: - $('.js-info-panel').outerWidth(),
+        value: - $('.js-info-panel').width(),
       },
       opacity: {
         value: 1,
@@ -59,6 +114,4 @@ $(function() {
       },
       offset: '1500',
     })
-
-})
-
+}

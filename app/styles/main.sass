@@ -9,11 +9,17 @@ $icon-font-path: '../fonts/'
   font-family: 'Roboto', 'sans-serif'
 
 .weather 
-  margin: 4rem
+  height: 100vh
+  vertical-align:  middle
+  padding-top: 14rem
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url('https://philos.pt/wp-content/uploads/2018/03/glass-rainy-car-rain-1920x1080.jpg')
 
 .panel
   margin: auto
-  max-width: 1200px
+  max-width: 1000px
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19)
   display: flex
   border: none
@@ -22,7 +28,7 @@ $icon-font-path: '../fonts/'
 
 .main-panel
   padding: 2rem 4rem
-  width: 70%
+  width: 60%
 
   &__title
     font-size: 4rem
@@ -52,7 +58,7 @@ $icon-font-path: '../fonts/'
     margin-right: 2rem
 
   &__temperature
-    font-size: 12rem
+    font-size: 9rem
     font-weight: 500
     position: relative
     left: -100px
@@ -70,20 +76,37 @@ $icon-font-path: '../fonts/'
     top: -10px
 
 .info-panel
-  padding: 2rem 3rem
+  padding-bottom: 2rem
   color: #f3f3f3
-  width: 30%
-  background-color: blue
+  width: 40%
+  background-color: #29B6F6
   position: relative
-  right: -30%
+  right: -40%
   @include border-right-radius(10px)
 
   &__container
     display: flex
-    flex-flow: row nowrap
+    flex-flow: column
     align-items: center
-    justify-content: space-between
+    justify-content: center
     margin-bottom: 2rem
+
+  &__header
+    font-size: 2rem
+    display: flex
+    flex-flow: column
+    align-items: center
+    margin-bottom: 2rem
+    padding: 3rem 2rem 2rem
+    background-color: #9C27B0
+    border-top-right-radius: 9px
+
+  &__h-text
+    text-align: center
+    font-size: 2rem
+    font-weight: 800
+    text-transform: uppercase
+    letter-spacing: .2rem
 
   &__icon
     font-size: 5rem
@@ -96,3 +119,17 @@ $icon-font-path: '../fonts/'
 /* HELPERS */
 .no-visible
   opacity: 0
+
+.margin-top
+  margin-top: 3rem
+
+.btn-purple
+  background-color: #E040FB
+  color: #ffffff
+  border: none
+  text-transform: uppercase
+  letter-spacing: .1rem
+
+  &:hover
+    color: #03A9F4
+    background-color: #ffffff
