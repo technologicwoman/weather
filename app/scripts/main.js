@@ -39,7 +39,7 @@ $(function() {
   let today = new Date();
   let currentDay = weekDays[today.getDay()];
   
-  $.get( "http://35.190.138.158:5002/predictions?city=asd&steps=3", function( data ) {
+  $.get( 'http://35.190.138.158:5002/predictions?city=asd&steps=3', function( data ) {
     storeData(data.predictions);
     putCurrentData(data.current, data.temp, currentDay);
     initAnimation();
@@ -76,7 +76,7 @@ const showPrediction = () => {
   let propability = max.value.toFixed(2);
   let message = `${name} ${weatherMessage[max.weather]}, the weather would be ${max.weather} with a probability of ${propability}`;
   $('.js-prediction-title').text(`Prediction to ${step} hours`);
-  $('.js-prediction-image').css("background-image" , `url(${weatherImg})`);
+  $('.js-prediction-image').css('background-image' , `url(${weatherImg})`);
   $('.js-prediction-description').text(message);
   $('.js-prediction-modal').addClass('is-active');
   predictionAnimation();
@@ -110,7 +110,7 @@ const putCurrentData = (currentWeather, currentTemp, currentDay) => {
 
   $('.js-main-panel-title').text(currentDay);
   $('.js-number').text(currentTemp);
-  $('.js-main-panel-image').css("background-image" , `url(${wtherImg})`);
+  $('.js-main-panel-image').css('background-image' , `url(${wtherImg})`);
 }
 
 const predictionAnimation = () => {
