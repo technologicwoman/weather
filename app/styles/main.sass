@@ -5,6 +5,8 @@ $icon-font-path: '../fonts/'
 @import "bower_components/bourbon/core/bourbon"
 @import "bower_components/neat/core/neat"
 
+*
+  font-family: 'Roboto', 'sans-serif'
 
 .weather 
   margin: 4rem
@@ -45,17 +47,18 @@ $icon-font-path: '../fonts/'
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    height: 175px
-    width: 175px
+    height: 0
+    width: 0
     margin-right: 2rem
 
   &__temperature
     font-size: 12rem
     font-weight: 500
+    position: relative
+    left: -100px
 
     sup
       font-size: 60%
-      
 
   &__subtitle
     font-weight: 800
@@ -63,6 +66,8 @@ $icon-font-path: '../fonts/'
     color: #cccccc
     margin-top: 2rem
     margin-left: 1rem
+    position: relative
+    top: -10px
 
 .info-panel
   padding: 2rem 3rem
